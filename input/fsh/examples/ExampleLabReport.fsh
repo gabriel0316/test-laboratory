@@ -113,6 +113,8 @@ Usage: #inline
 * result[4] = Reference(ExampleObsThrombocytes)
 * basedOn[0] = Reference(ExampleATELGALabServiceRequest)
 * conclusion = "Normales großes Blutbild. Keine pathologischen Befunde."
+* extension[DiagnosticReportCompositionR5].url = $DiagRepCompR5
+* extension[DiagnosticReportCompositionR5].valueReference = Reference(ExampleATELGALabComposition)
 
 // ------------------------------------------------------------
 // Example Patient (Max Mustermann)

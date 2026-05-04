@@ -37,6 +37,9 @@ Alias: $ATExtGenderAdd       = http://hl7.at/fhir/HL7ATCoreProfiles/4.0.1/Struct
 Alias: $ATExtAddrAddInfo     = http://hl7.at/fhir/HL7ATCoreProfiles/4.0.1/StructureDefinition/at-core-ext-address-additionalInformation
 Alias: $ATExtMuniCode        = http://hl7.at/fhir/HL7ATCoreProfiles/4.0.1/StructureDefinition/at-core-ext-address-municipalityCode
 
+// EU Lab R5 back-port extensions
+Alias: $DiagRepCompR5        = http://hl7.org/fhir/5.0/StructureDefinition/extension-DiagnosticReport.composition
+
 // ============================================================
 // Aliases for standard terminology
 // ============================================================
