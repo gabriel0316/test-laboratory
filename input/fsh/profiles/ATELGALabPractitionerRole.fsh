@@ -22,7 +22,7 @@ HL7 Austria Core PractitionerRole profile:
 
 // Organization: must reference AT ELGA Lab Organization
 * organization MS
-* organization only Reference(ATELGALabOrganization)
+* organization only Reference(OrganizationUvIps)
 * organization ^short = "The Austrian GDA organisation where this role is performed"
 
 // Specialty: Austrian medical specialties

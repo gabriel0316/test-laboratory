@@ -29,30 +29,6 @@ Austrian laboratory code catalogue published by the relevant Austrian authority.
 * #AT-LAB-001 "Lokaler Laborcode (Beispiel)" "Beispiel für einen lokalen österreichischen Laborcode"
 
 // ------------------------------------------------------------
-// Austrian Laboratory Organization Type Code System
-// ------------------------------------------------------------
-CodeSystem: ATLabOrgTypeCS
-Id: at-lab-org-type-cs
-Title: "AT ELGA Laboratory Organization Type Code System"
-Description: """Code system for types of laboratory organizations in the Austrian healthcare system.
-Based on the Austrian healthcare provider classification (GDA-Typen)."""
-
-* ^url = "https://fhir.hl7.at/elga-labor/CodeSystem/at-lab-org-type-cs"
-* ^status = #draft
-* ^experimental = true
-* ^caseSensitive = true
-* ^content = #complete
-* ^publisher = "HL7 Austria"
-* ^jurisdiction = urn:iso:std:iso:3166#AT "Austria"
-
-* #krankenhaus-labor       "Krankenhauslabor"       "Laboratorium innerhalb eines Krankenhauses"
-* #selbststaendiges-labor  "Selbstständiges Labor"  "Selbstständiges medizinisches Laboratorium (Ambulatorium)"
-* #praxis-labor            "Praxislabor"            "Labor einer Arztpraxis"
-* #mikrobiologie           "Mikrobiologisches Labor" "Laboratorium für Mikrobiologie und Infektionsdiagnostik"
-* #pathologie              "Pathologisches Labor"    "Laboratorium für Pathologie und Histologie"
-* #blutbank                "Blutbank / Transfusionsmedizin" "Blutbank oder transfusionsmedizinisches Labor"
-
-// ------------------------------------------------------------
 // Austrian Laboratory Practitioner Specialty Code System
 // Local specialty codes for Austrian medical practitioners
 // ------------------------------------------------------------

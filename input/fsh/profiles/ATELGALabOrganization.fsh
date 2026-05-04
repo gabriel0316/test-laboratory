@@ -50,7 +50,6 @@ its GDA OID here. The value SHALL be expressed as an OID URI
 // Type: laboratory classification
 // -------------------------------------------------------
 * type MS
-* type from ATLabOrganizationTypeVS (preferred)
 * type ^short = "Type of laboratory organization (e.g., hospital lab, independent lab)"
 
 // -------------------------------------------------------

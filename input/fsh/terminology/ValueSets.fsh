@@ -28,32 +28,7 @@ compatibility with the European Lab IG."""
 * include codes from system urn:oid:2.16.840.1.113883.2.9.6.2.5
 
 // Austrian local laboratory codes (example - replace with actual AT code system)
-* include codes from system $ATLabLocalCS
-
-// ------------------------------------------------------------
-// AT Lab Organization Type Value Set
-// Types of laboratory organizations in Austria
-// ------------------------------------------------------------
-ValueSet: ATLabOrganizationTypeVS
-Id: at-lab-organization-type-vs
-Title: "AT ELGA Laboratory Organization Type Value Set"
-Description: """Value set for types of laboratory organizations in the Austrian healthcare system."""
-
-* ^url = "https://fhir.hl7.at/elga-labor/ValueSet/at-lab-organization-type-vs"
-* ^status = #draft
-* ^experimental = true
-* ^publisher = "HL7 Austria"
-* ^jurisdiction = urn:iso:std:iso:3166#AT "Austria"
-
-// SNOMED CT: laboratory organization types
-* $sct#261904004 "Laboratory department"
-* $sct#708196004 "Private pathology laboratory"
-* $sct#708175003 "Clinical pathology laboratory"
-* $sct#11424001  "Hospital-based outpatient clinical laboratory"
-* $sct#39023-6   "Medical laboratory"
-
-// AT local codes for organization types
-* include codes from system $ATLabOrgTypeCS
+* include codes from system ATLabLocalCS
 
 // ------------------------------------------------------------
 // AT Lab Practitioner Specialty Value Set
@@ -84,7 +59,7 @@ to laboratory medicine. Based on the official Austrian Ärztegesetz specialties.
 * $sct#418112009 "Pulmonary medicine"
 
 // AT local specialty codes
-* include codes from system $ATLabSpecialtyCS
+* include codes from system ATLabSpecialtyCS
 
 // ------------------------------------------------------------
 // AT Lab Specimen Type Value Set

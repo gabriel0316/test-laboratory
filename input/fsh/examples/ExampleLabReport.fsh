@@ -276,7 +276,7 @@ Usage: #inline
 
 * id = "obs-leuko"
 * status = #final
-* category[0] = http://terminology.hl7.org/CodeSystem/observation-category#laboratory "Laboratory"
+* category[laboratory] = http://terminology.hl7.org/CodeSystem/observation-category#laboratory "Laboratory"
 * code = $loinc#26464-8 "Leukocytes [#/volume] in Blood"
 * code.text = "Leukozyten"
 * subject = Reference(ExampleATELGALabPatient)
@@ -306,7 +306,7 @@ Usage: #inline
 
 * id = "obs-ery"
 * status = #final
-* category[0] = http://terminology.hl7.org/CodeSystem/observation-category#laboratory "Laboratory"
+* category[laboratory] = http://terminology.hl7.org/CodeSystem/observation-category#laboratory "Laboratory"
 * code = $loinc#26453-1 "Erythrocytes [#/volume] in Blood"
 * code.text = "Erythrozyten"
 * subject = Reference(ExampleATELGALabPatient)
@@ -335,7 +335,7 @@ Usage: #inline
 
 * id = "obs-hgb"
 * status = #final
-* category[0] = http://terminology.hl7.org/CodeSystem/observation-category#laboratory "Laboratory"
+* category[laboratory] = http://terminology.hl7.org/CodeSystem/observation-category#laboratory "Laboratory"
 * code = $loinc#718-7 "Hemoglobin [Mass/volume] in Blood"
 * code.text = "Hämoglobin"
 * subject = Reference(ExampleATELGALabPatient)
@@ -365,7 +365,7 @@ Usage: #inline
 
 * id = "obs-hkt"
 * status = #final
-* category[0] = http://terminology.hl7.org/CodeSystem/observation-category#laboratory "Laboratory"
+* category[laboratory] = http://terminology.hl7.org/CodeSystem/observation-category#laboratory "Laboratory"
 * code = $loinc#20570-8 "Hematocrit [Volume Fraction] of Blood"
 * code.text = "Hämatokrit"
 * subject = Reference(ExampleATELGALabPatient)
@@ -394,7 +394,7 @@ Usage: #inline
 
 * id = "obs-thrombo"
 * status = #final
-* category[0] = http://terminology.hl7.org/CodeSystem/observation-category#laboratory "Laboratory"
+* category[laboratory] = http://terminology.hl7.org/CodeSystem/observation-category#laboratory "Laboratory"
 * code = $loinc#777-3 "Platelets [#/volume] in Blood by Automated count"
 * code.text = "Thrombozyten"
 * subject = Reference(ExampleATELGALabPatient)

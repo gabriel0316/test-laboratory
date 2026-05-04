@@ -47,7 +47,7 @@ Austrian-specific local codes MAY be provided as additional codings."""
 
 // Performer
 * performer 1..* MS
-* performer only Reference(ATELGALabPractitioner or ATELGALabPractitionerRole or ATELGALabOrganization or CareTeam or RelatedPerson or Patient)
+* performer only Reference(ATELGALabPractitioner or ATELGALabPractitionerRole or OrganizationUvIps or CareTeam or RelatedPerson or ATELGALabPatient)
 * performer ^short = "Austrian laboratory or practitioner responsible for this result"
 
 // Value: the result
@@ -70,7 +70,7 @@ Austrian-specific local codes MAY be provided as additional codings."""
 
 // Has member: panel results
 * hasMember MS
-* hasMember only Reference(ATELGALabObservation or QuestionnaireResponse or MolecularSequence)
+* hasMember only Reference(ATELGALabObservation)
 * hasMember ^short = "Child observation (panel result)"
 
 // Data absent reason

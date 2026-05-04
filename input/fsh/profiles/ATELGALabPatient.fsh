@@ -101,7 +101,6 @@ Gesundheitsdiensteanbieter (GDA). The system SHALL be an OID or URI identifying 
 // Address: use AT Core Address profile
 // -------------------------------------------------------
 * address MS
-* address only $ATCoreAddress
 * address ^short = "Austrian patient address (using AT Core Address profile)"
 
 // -------------------------------------------------------

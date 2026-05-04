@@ -53,7 +53,7 @@ The identifier SHALL be unique within the assigning organization."""
 
 // Based on: laboratory order
 * basedOn MS
-* basedOn only Reference(ATELGALabServiceRequest or CarePlan or MedicationRequest or NutritionOrder or ServiceRequest)
+* basedOn only Reference(ATELGALabServiceRequest)
 * basedOn ^short = "The laboratory order (Laborauftrag) this report fulfils"
 
 // Result observations
