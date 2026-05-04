@@ -1,0 +1,74 @@
+name: Build and Publish FHIR IG
+
+on:
+  push:
+    branches:
+      - main
+      - develop
+  pull_request:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  build:
+    name: Build FHIR IG
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Java (required by IG Publisher)
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+
+      - name: Set up Node.js (required by SUSHI)
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+
+      - name: Install SUSHI
+        run: npm install -g fsh-sushi
+
+      - name: Run SUSHI (FSH → FHIR JSON)
+        run: sushi .
+
+      - name: Cache IG Publisher
+        uses: actions/cache@v4
+        with:
+          path: input-cache/publisher.jar
+          key: ig-publisher-${{ hashFiles('input-cache/publisher.jar') }}
+          restore-keys: ig-publisher-
+
+      - name: Download IG Publisher (if not cached)
+        run: |
+          mkdir -p input-cache
+          if [ ! -f input-cache/publisher.jar ]; then
+            curl -L https://github.com/HL7/fhir-ig-publisher/releases/latest/download/publisher.jar \
+              -o input-cache/publisher.jar
+          fi
+
+      - name: Run IG Publisher
+        run: |
+          java -jar input-cache/publisher.jar \
+            -ig ig.ini \
+            -tx https://tx.fhir.org/r4
+
+      - name: Upload IG output as artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: ig-output
+          path: output/
+          retention-days: 30
+
+      - name: Deploy to GitHub Pages (main branch only)
+        if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./output
+          publish_branch: gh-pages
+          force_orphan: true

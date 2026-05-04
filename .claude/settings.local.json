@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:hl7.eu)",
+      "WebFetch(domain:fhir.hl7.at)"
+    ]
+  }
+}

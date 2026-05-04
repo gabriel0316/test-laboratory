@@ -1,0 +1,102 @@
+id: hl7.fhir.at.elga-labor
+canonical: https://fhir.hl7.at/elga-labor
+name: ATELGALaborIG
+title: "HL7 Austria ELGA Laboratory Report R4 Implementation Guide"
+description: >-
+  Austrian ELGA (Elektronische Gesundheitsakte) Laboratory Report FHIR R4
+  Implementation Guide. Derived from the HL7 Europe Laboratory IG (v0.1.1)
+  and aligned with HL7 Austria Core R4 profiles (v2.0.0), enabling
+  cross-border interoperability via MyHealth@EU while meeting Austrian
+  national requirements.
+status: draft
+version: 0.1.0
+fhirVersion: 4.0.1
+copyrightYear: 2024+
+releaseLabel: ci-build
+license: CC-BY-4.0
+
+publisher:
+  name: HL7 Austria
+  url: https://www.hl7.at
+  email: office@hl7.at
+
+contact:
+  - name: HL7 Austria TC FHIR
+    telecom:
+      - system: url
+        value: https://www.hl7.at
+      - system: email
+        value: office@hl7.at
+
+jurisdiction: urn:iso:std:iso:3166#AT "Austria"
+
+# Dependencies
+# Note: verify package IDs against https://registry.fhir.org before building
+dependencies:
+  hl7.fhir.eu.laboratory:
+    id: hl7fhireulab
+    uri: http://hl7.eu/fhir/laboratory/ImplementationGuide/hl7.fhir.eu.laboratory
+    version: 0.1.1
+  hl7.fhir.at.core:
+    id: hl7fhiratcore
+    uri: http://hl7.at/fhir/HL7ATCoreProfiles/4.0.1/ImplementationGuide/hl7.fhir.at.core
+    version: 2.0.0
+  hl7.terminology.r4:
+    id: hl7terminology
+    uri: http://terminology.hl7.org/ImplementationGuide/hl7.terminology
+    version: 6.2.0
+  hl7.fhir.uv.extensions.r4:
+    id: hl7fhirextensions
+    uri: http://hl7.org/fhir/extensions/ImplementationGuide/hl7.fhir.uv.extensions
+    version: 5.1.0
+
+pages:
+  index.md:
+    title: Home
+  guidance.md:
+    title: Implementation Guidance
+  changelog.md:
+    title: Change Log
+
+menu:
+  Home: index.html
+  Guidance: guidance.html
+  Artifacts:
+    Profiles: artifacts.html#structures-resource-profiles
+    Extensions: artifacts.html#structures-extension-definitions
+    Value Sets: artifacts.html#terminology-value-sets
+    Code Systems: artifacts.html#terminology-code-systems
+    Examples: artifacts.html#example-example-instances
+  Change Log: changelog.html
+
+groups:
+  LabReportProfiles:
+    name: Laboratory Report Profiles
+    description: Core profiles for the Austrian ELGA Laboratory Report
+    resources:
+      - StructureDefinition/at-elga-lab-bundle
+      - StructureDefinition/at-elga-lab-composition
+      - StructureDefinition/at-elga-lab-diagnosticreport
+      - StructureDefinition/at-elga-lab-observation
+  ParticipantProfiles:
+    name: Participant Profiles
+    description: Profiles for persons and organizations involved in laboratory reporting
+    resources:
+      - StructureDefinition/at-elga-lab-patient
+      - StructureDefinition/at-elga-lab-practitioner
+      - StructureDefinition/at-elga-lab-practitionerrole
+      - StructureDefinition/at-elga-lab-organization
+  SupportingProfiles:
+    name: Supporting Profiles
+    description: Supporting resource profiles for orders and specimens
+    resources:
+      - StructureDefinition/at-elga-lab-servicerequest
+      - StructureDefinition/at-elga-lab-specimen
+
+parameters:
+  apply-contact: true
+  apply-jurisdiction: true
+  apply-publisher: true
+  apply-version: true
+  show-inherited-invariants: false
+  path-expansion-params: '../../input/_resources/exp-params.json'
