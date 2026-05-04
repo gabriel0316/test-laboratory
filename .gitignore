@@ -1,19 +1,7 @@
-# IG Publisher output
-output/
-temp/
-input-cache/
-fsh-generated/
-.fhir/
-
-# Node
-node_modules/
-package-lock.json
-
-# OS
 .DS_Store
 Thumbs.db
-
-# Editor
-.vscode/
-.idea/
-*.swp
+/fsh-generated
+/input-cache
+/output
+/temp
+/template
