@@ -25,9 +25,6 @@ biochemistry, haematology, microbiology, and immunology."""
 
 // Category: laboratory (inherited from EU Lab, re-stated for clarity)
 * category MS
-* category ^slicing.discriminator.type = #pattern
-* category ^slicing.discriminator.path = "$this"
-* category ^slicing.rules = #open
 
 // Code: test code (LOINC preferred, Austrian codes as supplement)
 * code 1..1 MS

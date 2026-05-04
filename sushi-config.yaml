@@ -86,4 +86,4 @@ parameters:
   apply-publisher: true
   apply-version: true
   show-inherited-invariants: false
-  path-expansion-params: '../../input/_resources/exp-params.json'
+  # path-expansion-params: '../../input/_resources/exp-params.json'
